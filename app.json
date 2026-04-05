@@ -1,0 +1,83 @@
+{
+  "name": "DevilXteam MD",
+  "description": "DevilXteam MD - Multi-functional WhatsApp Bot with 301+ commands",
+  "keywords": ["whatsapp", "bot", "baileys", "devilxteam"],
+  "repository": "https://github.com/Devilkumail-MD/DevilXTeam-MD",
+  "logo": "",
+  "stack": "container",
+  "env": {
+    "SESSION": {
+      "description": "Session ID (starts with DKML~)",
+      "required": true
+    },
+    "SESSION_URL": {
+      "description": "Session generator site URL",
+      "value": "https://devilxteam.replit.app",
+      "required": true
+    },
+    "SUDO": {
+      "description": "Admin WhatsApp number with country code (e.g. 923001234567)",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Bot display name",
+      "value": "DevilXteam MD",
+      "required": false
+    },
+    "BOT_INFO": {
+      "description": "Bot info string (name;owner;default)",
+      "value": "DevilXteam MD;DevilXteam;default",
+      "required": false
+    },
+    "MODE": {
+      "description": "Bot mode: private or public",
+      "value": "private",
+      "required": false
+    },
+    "LANGUAGE": {
+      "description": "Bot language: urdu, english, or hindi",
+      "value": "urdu",
+      "required": false
+    },
+    "CHATBOT": {
+      "description": "Enable AI chatbot (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Always show online status (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Auto-read others' status (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "ANTI_DELETE": {
+      "description": "Save deleted messages (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "HANDLERS": {
+      "description": "Command prefix (e.g. . or ! or /)",
+      "value": ".",
+      "required": false
+    },
+    "STICKER_DATA": {
+      "description": "Sticker pack name;author",
+      "value": "DevilXteam MD;DevilXteam",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" },
+    { "url": "heroku/nodejs" }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}

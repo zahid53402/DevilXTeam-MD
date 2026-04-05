@@ -1,0 +1,8 @@
+run = "npm install --legacy-peer-deps && bash start.sh"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+deploymentTarget = "vm"
+run = ["node", "index.js"]
